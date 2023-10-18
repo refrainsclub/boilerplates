@@ -33,6 +33,13 @@ resource "proxmox_vm_qemu" "srv-prod-1" {
         model  = "virtio"
     }
 
+    disk {
+        iothread = 0
+        type = "virtio"
+        storage = "local-lvm"
+        size = "10G"
+    }
+
     # VM Cloud-Init Settings
     os_type = "cloud-init"
 
