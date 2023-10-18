@@ -36,13 +36,13 @@ resource "proxmox_vm_qemu" "srv-prod-1" {
     # VM Disk Settings
     disk {
         slot = 0
-        size = "10G"
+        size = "20G"
         storage = "local-lvm"
-        type = "virtio"
+        type = "scsci"
         iothread = 1
     }
 
-    bootdisk = "virtio0"
+    bootdisk = "scsi0"
 
     # VM Cloud-Init Settings
     os_type = "cloud-init"
