@@ -6,7 +6,7 @@ resource "proxmox_vm_qemu" "srv-prod-1" {
     
     # VM General Settings
     target_node = "prx-prod-1"
-    vmid = "100"
+    vmid = "102"
     name = "srv-prod-1"
     desc = "Ubuntu Server"
 
