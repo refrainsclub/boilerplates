@@ -33,22 +33,11 @@ resource "proxmox_vm_qemu" "srv-prod-1" {
         model  = "virtio"
     }
 
-    # VM Disk Settings
-    disk {
-        slot = 0
-        size = "20G"
-        storage = "local-lvm"
-        type = "scsci"
-        iothread = 1
-    }
-
-    bootdisk = "scsi0"
-
     # VM Cloud-Init Settings
     os_type = "cloud-init"
 
     # (Optional) IP Address and Gateway
-    ipconfig0 = "ip=10.0.0.50/0,gw=10.0.0.1"
+    ipconfig0 = "ip=10.0.0.50/24,gw=10.0.0.1"
     
     # (Optional) Default User
     ciuser = "james"
