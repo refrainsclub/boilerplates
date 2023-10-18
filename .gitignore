@@ -1,2 +1,4 @@
 credentials.pkr.hcl
 credentials.auto.tfvars
+.terraform
+.terraform.lock.hcl
