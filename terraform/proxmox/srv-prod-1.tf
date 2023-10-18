@@ -33,6 +33,15 @@ resource "proxmox_vm_qemu" "srv-prod-1" {
         model  = "virtio"
     }
 
+    # VM Disk Settings
+    disk {
+        slot = 0
+        size = "10G"
+        type = "virtio"
+    }
+
+    bootdisk = "virtio0"
+
     # VM Cloud-Init Settings
     os_type = "cloud-init"
 
