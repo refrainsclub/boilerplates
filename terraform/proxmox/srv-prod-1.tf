@@ -17,7 +17,7 @@ resource "proxmox_vm_qemu" "srv-prod-1" {
     clone = "ubuntu-server-jammy"
 
     # VM System Settings
-    agent = 0
+    agent = 1
     
     # VM CPU Settings
     cores = 1
