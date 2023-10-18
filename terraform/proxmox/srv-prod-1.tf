@@ -17,7 +17,7 @@ resource "proxmox_vm_qemu" "srv-prod-1" {
     clone = "ubuntu-server-jammy"
 
     # VM System Settings
-    agent = 1
+    agent = 0
     
     # VM CPU Settings
     cores = 1
@@ -31,13 +31,6 @@ resource "proxmox_vm_qemu" "srv-prod-1" {
     network {
         bridge = "vmbr0"
         model  = "virtio"
-    }
-
-    disk {
-        iothread = 0
-        type = "virtio"
-        storage = "local-lvm"
-        size = "20G"
     }
 
     # VM Cloud-Init Settings
