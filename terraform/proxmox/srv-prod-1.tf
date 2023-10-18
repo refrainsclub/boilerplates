@@ -37,7 +37,9 @@ resource "proxmox_vm_qemu" "srv-prod-1" {
     disk {
         slot = 0
         size = "10G"
+        storage = "local-lvm"
         type = "virtio"
+        iothread = 1
     }
 
     bootdisk = "virtio0"
