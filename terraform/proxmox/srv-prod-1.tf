@@ -10,9 +10,6 @@ resource "proxmox_vm_qemu" "srv-prod-1" {
     name = "srv-prod-1"
     desc = "Ubuntu Server"
 
-    # VM Advanced General Settings
-    onboot = true 
-
     # VM OS Settings
     clone = "ubuntu-server-jammy"
 
